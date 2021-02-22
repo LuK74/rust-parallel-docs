@@ -1,5 +1,8 @@
 # Tracking sheet
 
+## 08-02-2021
+- learning Rust 
+
 ## 01-02-2021
 - learning Rust
 - studying GNU parallel
