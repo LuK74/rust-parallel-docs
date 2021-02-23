@@ -3,7 +3,13 @@
 # Tracking sheet
 
 ## 08-02-2021
-- learning Rust 
+- learning Rust
+    - starting and finishing the minigrep project 
+    - starting the Web Server project
+- technological watch
+    - file creation
+    -  editing from our research on Rust since the beginning of the project
+- initialization of project sources `rust-parallel`
 
 ## 01-02-2021
 - learning Rust
