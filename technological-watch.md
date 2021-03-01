@@ -1,6 +1,12 @@
 [Back](README.md)
 
-# Technological Watch
+# Table of Contents
+1. [Technological Watch of projects in Rust](#Technological-Watch-of-projects-in-Rust)
+2. [Technological Watch about our GNU Parallel Rust project](#Technological-Watch-about-our-GNU-Parallel-Rust-project)
+3. [Stay informed](#To-stay-informed-about-Rust)
+---
+
+# Technological Watch of projects in Rust
 
 *edit : 22/02/2021*
 
@@ -41,6 +47,7 @@ The members of the foundation are Microsoft, Google, AWS, Huawei and Mozilla.
 [pj4]: https://medium.com/digitalfrontiers/gui-programming-with-rust-c71fe4051b1a
 [pj5]: https://dev.to/davidedelpapa/rust-gui-introduction-a-k-a-the-state-of-rust-gui-libraries-as-of-january-2021-40gl
 [pj6]: https://serokell.io/blog/open-source-rust
+[pj7]: https://project-awesome.org/rust-unofficial/awesome-rust
 <!--  -->
 There are today a large number of projects in Rust for :
 - video game : [arewegameyet][pj1], [serokell](https://serokell.io/blog/open-source-rust#game-development)
@@ -50,7 +57,7 @@ There are today a large number of projects in Rust for :
 - Blockchain : [serokell](https://serokell.io/blog/open-source-rust#blockchain)
 
 
-Non-exhaustive list of projects : [dunebook][pj3], [serokell][pj6]
+Non-exhaustive list of projects : [dunebook][pj3], [serokell][pj6], [project-awesome][pj7]
 
 ## Operating System
 <!-- sources -->
@@ -75,6 +82,12 @@ Rust is now also used in the Microsoft Windows operating system to address robus
 
 Rust is also used in [AWS (Amazon Web Service)][oth1] and [npm][oth2].
 
+---
+# Technological Watch about our GNU Parallel Rust project
+
+test
+
+---
 # To stay informed about Rust
 <!-- sources -->
 [tw0]: https://www.rust-lang.org/fr
