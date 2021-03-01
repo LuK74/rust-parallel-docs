@@ -85,7 +85,13 @@ Rust is also used in [AWS (Amazon Web Service)][oth1] and [npm][oth2].
 ---
 # Technological Watch about our GNU Parallel Rust project
 
-test
+## Tokio
+- Command parser enhanced by Tokio (based on the std::process::Command from Rust).   
+- Command struct can be used as Jobs struct, his design correspond exactly to what we were looking to implement for Jobs.   
+- Command struct also comes with stdin, stdout and stderr handling function which we'll make the output handling easier.   
+- A whole set of synchronizations tools are furnished like channels (oneshot, mpsc, watch,...), Mutex and Barrier.
+- The module "task" also provide what we call "asynchronous green-threads" which could be very useful for our multithreaded application.
+- A lot of I/O asynchronous functionalities which allow the application to be optimized
 
 ---
 # To stay informed about Rust
