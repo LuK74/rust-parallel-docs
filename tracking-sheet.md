@@ -2,6 +2,16 @@
 
 # Tracking sheet
 
+## Week of 01-03-2021
+- wrote our specifications
+- looked for another framework than Tokio
+- writing of some code samples using Tokio
+
+## Week of 22-02-2021
+- study of GNU parallel
+- wrote a first draw of our grammar
+- ended the learning of Rust (server project in the rust book)
+
 ## 08-02-2021
 - learning Rust
     - starting and finishing the minigrep project 
