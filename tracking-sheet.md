@@ -2,6 +2,9 @@
 
 # Tracking sheet
 
+## Week of 08-03-2021
+- [mid-term presentation](soutenance-mi_parcours.pdf)
+
 ## Week of 01-03-2021
 - wrote our specifications
 - looked for another framework than Tokio
