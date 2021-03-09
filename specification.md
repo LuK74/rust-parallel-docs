@@ -60,7 +60,7 @@ fixer les étapes
 
 
 ## Grammaire (avec récursivité)
-
+```
 *S → parallel options commands separators
 
 options → ε
@@ -85,3 +85,4 @@ input → number nextInput
 
 nextInput → ε
 	     | input 
+```
