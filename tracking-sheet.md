@@ -36,7 +36,9 @@ The project started on January 25, 2021
 ## Week 5 (22-02-2021)
 - study of GNU parallel
 - wrote a first draw of our grammar
+
 ![grammar v1](images/grammar_v1.png)
+
 - a little training in Rust: creating an [input system in console](https://gricad-gitlab.univ-grenoble-alpes.fr/Projets-INFO4/20-21/14/rust-parallel/-/tree/entrycmd) mode like GNU parallel
 
 ## Week 6 (01-03-2021)
@@ -47,25 +49,7 @@ The project started on January 25, 2021
 - writing of some code samples using Tokio
 >the research was conclusive
 
-<style>
-.alert-warning {
-  color: rgb(138,109,59) !important;
-}
-</style>
-
-<div class="alert-warning">
-    Now, these researches have been merge on master to really start the project
-</div>
-
-<div class="panel panel-warning">
-**Warning**
-{: .panel-heading}
-    <div class="panel-body">
-        Now, these researches have been merge on master to really start the project
-    </div>
-</div>
-
->Now, these researches have been merge on master to really start the project
+> :warning: Now, these researches have been merge on master to really start the project
 
 ## Week 7 (08-03-2021)
 - [mid-term presentation](soutenance-mi_parcours.pdf)

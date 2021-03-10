@@ -13,6 +13,8 @@
 It is inspired by the GNU parallel software to develop a command executor in parallel with the RUST language. The language is particularly interesting for its performance and the production of robust code.
 RUST is a demanding language but recognized by experts.
 
+![rust_parallel](images/illustrations/rust_parallel.png)
+
 ## Technological constraints
 - RUST: https://www.rust-lang.org/
 - Tokio https://github.com/tokio-rs/tokio
