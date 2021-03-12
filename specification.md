@@ -36,6 +36,9 @@ src/
 
 => Choix important : Décision d’implémenter la remote execution, choix d’une librairie au lieu d’une autre pour des optimisations conséquentes
 
+- Choix de l'utilisation de la librairie (Mio ou Tokio) : Nous avons choisi d'utiliser Tokio afin de développer notre projet, car malheureusement Mio ne permet pas d'implémenter des applications possédant l'exécution de processus en parallèle, mais des applications qui gèrent des sources d'événements et qui permettent de créer une queue d'événements mis en attente. Nous avons donc choisit d'utiliser Tokio, qui semble être plus compliqué à appréhender, mais qui possède des fonctionnalités en lien avec notre projet.
+
+
 ## Enjeux technique : 
 => Parler des exigences (ENF ?) ??
 
