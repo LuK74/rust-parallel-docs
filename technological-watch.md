@@ -4,6 +4,8 @@
 1. [Technological Watch of projects in Rust](#Technological-Watch-of-projects-in-Rust)
 2. [Technological Watch about our GNU Parallel Rust project](#Technological-Watch-about-our-GNU-Parallel-Rust-project)
 3. [Stay informed](#To-stay-informed-about-Rust)
+
+![trust-rust](images/illustrations/trust-rust.jpg)
 ---
 
 # Technological Watch of projects in Rust

@@ -2,6 +2,8 @@
 
 # Specification
 
+![crab](images/illustrations/rust_crab.png)
+
 ## note:
 trouver des squelettes (Tokio)
 tableau comparatif de veille 
