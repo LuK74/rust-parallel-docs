@@ -44,8 +44,9 @@ The project started on January 25, 2021
 ## Week 6 (01-03-2021)
 - wrote our [specifications](specification.md)
     + Project tree structure
-- looked for another framework than Tokio
-    + METTRE LE LIEN VERS technologie-watch.md DES FRAMEWORK RECHERCHER
+    + Main objectif
+    + Digram
+- looked for [another framework](technological-watch.md##Asynchronous-framework) than Tokio
 - writing of some code samples using Tokio
 >the research was conclusive
 

@@ -85,7 +85,8 @@ Rust is also used in [AWS (Amazon Web Service)][oth1] and [npm][oth2].
 ---
 # Technological Watch about our GNU Parallel Rust project
 
-## Tokio
+## Asynchronous framework
+### Tokio
 - Command parser enhanced by Tokio (based on the std::process::Command from Rust).   
 - Command struct can be used as Jobs struct, his design correspond exactly to what we were looking to implement for Jobs.   
 - Command struct also comes with stdin, stdout and stderr handling function which we'll make the output handling easier.   
@@ -93,12 +94,12 @@ Rust is also used in [AWS (Amazon Web Service)][oth1] and [npm][oth2].
 - The module "task" also provide what we call "asynchronous green-threads" which could be very useful for our multithreaded application.
 - A lot of I/O asynchronous functionalities which allow the application to be optimized
 
-## Mio
+### Mio
 - A low-level I/O library focusing on non-blocking APIs and event notification for building high performance I/O apps with as little overhead as possible over the OS abstractions.   
 - Provides tools to create an event loop, using a mio::Poll which monitors event::Sources, waiting until one or more become "ready" for some class of operations (read/write).
 - Provides non blocking TCP/UDP.   
 
-## Comparison between Mio & Tokio
+### Comparison between Mio & Tokio
 Mio can be seen as an anterior low level version of Tokio, it has less functionalities than Tokio but is way easier to apprehend. It let the user have the tools to create a basic event loop using tcp & udp connections. It misses a lot of functionalities which could be required for the project though.
 Tokio on the contrary has more features which are related to the project, but is harder to apprehend because it uses a lot of concepts we have to understand before using the tools it offers.
 
