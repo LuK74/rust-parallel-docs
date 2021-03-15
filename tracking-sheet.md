@@ -59,5 +59,10 @@ The project started on January 25, 2021
     + grammare
         - search for a crate to parse a command line
         - first tests on the different crates
-    + manage the options, selected for our project, in the execution flow
+    + execution flow : manage the options, selected for our project, in the execution flow
     + interpretation of an AST (Abstract Syntax Tree)
+
+## Week 8 (15-03-2021)
+- execution flow : set up thread worker
+    + set up dry_run : it works
+    + set up keep_order : don't work perfectly
