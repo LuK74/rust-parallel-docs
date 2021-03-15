@@ -66,3 +66,7 @@ The project started on January 25, 2021
 - execution flow : set up thread worker
     + set up dry_run : it works
     + set up keep_order : don't work perfectly
+- grammar parsing : branch **pest-main**
+    + first steps with pest crate
+    + implementing our grammar in .pest format
+    + first parsing tests with simple input from a file

@@ -105,6 +105,28 @@ Rust is also used in [AWS (Amazon Web Service)][oth1] and [npm][oth2].
 Mio can be seen as an anterior low level version of Tokio, it has less functionalities than Tokio but is way easier to apprehend. It let the user have the tools to create a basic event loop using tcp & udp connections. It misses a lot of functionalities which could be required for the project though.
 Tokio on the contrary has more features which are related to the project, but is harder to apprehend because it uses a lot of concepts we have to understand before using the tools it offers.
 
+## Parsing framework
+### Clap (or Command Line Argument Parser)
+- Pros : 
+    - Is a simple-to-use, efficient, and fully-configurable library for parsing command line arguments.
+    - It has a really good error handling and can informs users with a friendly message and exits gracefully.
+- Cons :
+    - Doesn't really fit our project for many reasons :
+        - Clap has his own grammar designed for command line conventions
+        - We can't add rules like the separator ":::" one, without forcing really hard the crate...
+
+### Pest
+-  Pros :
+    - Has a [book](https://pest.rs/book/intro.html)
+    - Perfectly feeting our needs because the crate is dynamicly building rules from a grammar file of .pest format following [PEG rules](https://en.wikipedia.org/wiki/Parsing_expression_grammar).
+    - Accessibility : fast & easy to begging with (one afternoon of work) and do our first tests.
+    - Other features : Precedence climbing / Input handling / Custom errors / Runs on stable Rust
+- Cons : 
+    - Not found yet.
+
+### Comparison between Clap & Pest
+In the end, clap was a good easy-to-start-with idea but is not feeting with our needs. So we moved on for another one and found pest, which is feeting our needs really well.
+
 ---
 # To stay informed about Rust
 <!-- sources -->

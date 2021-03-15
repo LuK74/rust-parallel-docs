@@ -65,32 +65,27 @@ src/
 ### Objectifs secondaires : 
 - exécution à distance (via crates Tokio)
 
-## Grammaire (avec récursivité)
+## Grammaire simplifiée sans récursivité gauche
 ```
-*S → parallel options commands separators
+*S → parallel options* commands separators*
 
-options → ε
-        | --dry-run options
-        | --keep-order options
-        | --pipe options
-        | --jobs number options
-        | --j number options
-        | --help options
+options → --dry-run 
+        | --keep-order 
+        | --pipe 
+        | --jobs number 
+        | --j number 
+        | --help
 
-commands → string arguments
+commands → string arguments*
 
-arguments → ε
-        | string arguments
-        | 'string' arguments 
+arguments → string 
+          | 'string'
+          | { number* }
 
-separators → ε
-        | ::: input separators
+separators → ::: input+
 
-input → number nextInput        
-        | string nextInput
-
-nextInput → ε
-        | input 
+input → number       
+      | string 
 ```
 
 ## Diagramme
