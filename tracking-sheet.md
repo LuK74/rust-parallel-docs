@@ -70,3 +70,9 @@ The project started on January 25, 2021
     + first steps with pest crate
     + implementing our grammar in .pest format
     + first parsing tests with simple input from a file
+- client/server : branch **remoteExec-code**
+    + code refactoring in a Channel mod
+    + redesigning of Client/Server in order for them to use Channel
+    + implementation of a test (using of predefined server address)
+        - Client : cargo run -- -c [msgToSend]"
+        - Server : cargo run -- -s"
