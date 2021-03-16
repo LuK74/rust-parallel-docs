@@ -76,3 +76,6 @@ The project started on January 25, 2021
     + implementation of a test (using of predefined server address)
         - Client : cargo run -- -c [msgToSend]"
         - Server : cargo run -- -s"
+- interpretor : branch **interpretor**
+    + new version of the function interpret in order to create jobs
+    + modification of Job class without arguments   
