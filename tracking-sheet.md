@@ -80,3 +80,10 @@ The project started on January 25, 2021
 - interpretor : branch **interpretor**
     + new version of the function interpret in order to create jobs
     + modification of Job class without arguments   
+
+## Week 9 (22-03-2021)
+- client/server : branch **remoteExec-code**
+    + add the file transfer option
+        - create temporary file in the crate (directory ./tmp/)
+        - handle the case of file with same names (use version notation, ex : toto, toto(1), toto(2))
+    + fix of a few bugs
