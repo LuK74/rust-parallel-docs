@@ -63,11 +63,12 @@ The project started on January 25, 2021
     + interpretation of an AST (Abstract Syntax Tree)
 
 ## Week 8 (15-03-2021)
-- execution flow : set up thread worker
-    + set up dry_run : it works
-    + set up keep_order : it works
-    + retrieves stdout asynchronously using a "multi-producer, single-consumer" approach 
-- grammar parsing : branch **pest-main**
+- execution flow : branch **exec** -
+    + set up thread worker
+        - set up dry_run : it works
+        - set up keep_order : it works
+        - retrieves stdout asynchronously using a "multi-producer, single-consumer" approach 
+- grammar parsing : 
     + first steps with pest crate
     + implementing our grammar in .pest format
     + first parsing tests with simple input from a file
@@ -87,3 +88,7 @@ The project started on January 25, 2021
         - create temporary file in the crate (directory ./tmp/)
         - handle the case of file with same names (use version notation, ex : toto, toto(1), toto(2))
     + fix of a few bugs
+- execution flow : 
+    + comment on the code
+    + new test
+        - incident : If an error occurs during the execution of the command then we fall into an infinite wait.
