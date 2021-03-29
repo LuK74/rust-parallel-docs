@@ -12,8 +12,8 @@ src/
         | --> server
         | --> client
 | --> core/
-		|--> job / jobmanager
-		|--> parser / interpretor / grammar
+        |--> job / jobmanager
+        |--> parser / interpretor / grammar
 ```
 
 ## Design
