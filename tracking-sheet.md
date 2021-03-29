@@ -92,3 +92,11 @@ The project started on January 25, 2021
     + comment on the code
     + new test
         - incident : If an error occurs during the execution of the command then we fall into an infinite wait.
+
+## Week 9 (29-03-2021)
+- merge on master of
+    + execution flow
+    + client/server
+    + parser/interpretor
+- last test of our code
+- try to generate documentation
