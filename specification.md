@@ -4,70 +4,43 @@
 
 ![crab](images/illustrations/rust_crab.png)
 
-## note:
-trouver des squelettes (Tokio)
-tableau comparatif de veille 
-
-## Structure/Arborescence du projet:
+## Project's tree structure
 ```
 src/
 | --> parallel.rs
 | --> remote/
-        | --> server/
-        | --> client/
+        | --> server
+        | --> client
 | --> core/
-		|--> parser/
-		|--> job/
+        |--> job / jobmanager
+        |--> parser / interpretor / grammar
 ```
 
-## Diagramme de classe détails :
-- **Parallel** : Classe principale, appellera le Parser afin de générer les objets Jobs, puis créera les JobManager permettant l’exécution
-- **Parser** : Parse l’entrée du programme afin de créer des objets Jobs
-- **JobManager** : Créer et ordonnance les JobExecutor, effectuera l’attribution des Jobs
-- **JobExecutor** : Objet Thread?
-- **Job** : Objets contenant les informations sur le Job qu’on va vouloir exécuter
+## Design
+### Detailed class diagram
 
+![class diagram](images/diagram/class_diagram.png)
 
+- **Parallel** : Main class that will :
+    - Create the JobManager.
+    - Call the parser.
+    - Give the results to the interpretor.
+    - Start the execution.
+- **Parser** : Will parse the user input and make sure it respect a given grammar.
+- **Interpretor** : Will create all the jobs according to the given parse by the parser.
+    - It will interpret every options and communicate them to the JM.
+    - It will interpret the values after the `:::`s and build all possible combinations for the jobs.
+    - It will then interpret targets like `{}` or `{1}` in the command and other stuff like quoted characters.
+- **JobManager** : Manages all the jobs that will run.
+- **Job** : Will contain all the needed information to execute one shell job.
 
-## Choix d’implémentation :
-=> Définir quelles fonctionnalités on souhaite implémenter
+### Sequence Diagram *(illustrates the above section)*
 
-=> Énoncer les crates externes utilisées s’il y’en a
+![sequence diagram](images/diagram/sequence.png)
 
-=> Structure du code : Binary crates, library crates, test, benchmark
-
-=> Choix important : Décision d’implémenter la remote execution, choix d’une librairie au lieu d’une autre pour des optimisations conséquentes
-
-- Choix de l'utilisation de la librairie (Mio ou Tokio) : Nous avons choisi d'utiliser Tokio afin de développer notre projet, car malheureusement Mio ne permet pas d'implémenter des applications possédant l'exécution de processus en parallèle, mais des applications qui gèrent des sources d'événements et qui permettent de créer une queue d'événements mis en attente. Nous avons donc choisit d'utiliser Tokio, qui semble être plus compliqué à appréhender, mais qui possède des fonctionnalités en lien avec notre projet.
-
-
-## Enjeux technique : 
-=> Parler des exigences (ENF ?) ??
-
-=> 
-
-## Objectifs 
-### Objectifs finaux de Rust Parallel :
-- parsing de commande avec arguments en objets Rust (voir diagramme de classe)
-- exécution de commandes externes à parallel (comme echo par exemple)
-
-- fonctionnalités parallel
-    + lire l'entrée standard (utilisation d'une pipe avant parallel)
-    + l'argument ":::" (peut être invoqué plusieurs fois)
-    + simple guillemet pour interprétation de caractères spéciaux
-    + l'argument {} et/ou {1}, {2}.
-    + fonctionnalité --dry-run. 
-    + fonctionnalité --keep-order.
-    + fonctionnalité --pipe.
-- multi-threader
-    + --jobs / -j : choisir le nombre de thread
-
-### Objectifs secondaires : 
-- exécution à distance (via crates Tokio)
-
-## Grammaire simplifiée sans récursivité gauche
+### Simplified grammar without left recursivity
 ```
-*S → parallel options* commands separators*
+*S → parallel options* commands* separators*
 
 options → --dry-run 
         | --keep-order 
@@ -80,7 +53,7 @@ commands → string arguments*
 
 arguments → string 
           | 'string'
-          | { number* }
+          | number*
 
 separators → ::: input+
 
@@ -88,12 +61,25 @@ input → number
       | string 
 ```
 
-## Diagramme
+## Goals
 
 ### Gantt Digram
 
-### Sequence Diagram
+![gantt diagram](images/diagram/gantt.png)
 
-### Class Diagram
+### Main goals
+- parsing
+- command execution
+- parallel's features :
+    + read standard input (using a `|` before calling parallel).
+    + separator `:::` (can be called multiple times).
+    + simple quotes to interpret special character.
+    + targets like `{}`, `{1}`, `{2}`, ...
+    + `--dry-run` option. 
+    + `--keep-order` option.
+    + `--pipe` option.
+    + `--jobs` / `-j` : to choose the max number of working threads.
 
-![class diagram](images/diagram/class_diagram.png)
+### Secondary goals
+- remote execution using tokio.
+
