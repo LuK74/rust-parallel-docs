@@ -37,3 +37,8 @@ do technological watch
 ### [Technological Watch](technological-watch.md)
 ### [Conventions](conventions.md)
 ### [Specification](specification.md)
+### [Mid-term defense](soutenance-mi_parcours.pdf)
+### Final defense
+- [Project Report](Project_Report.pdf)
+
+- [Final Defense](soutenance-final.pdf)
